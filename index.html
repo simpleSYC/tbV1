@@ -110,15 +110,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <hr class="line"><div>
 <div class="form-group" ><label>Products ekstra:</label>
 <select name="product_size" class="form-control input-sm"   onchange="SETINZI_FTO(this);">
-<option onclick="CENATAR(2,this);">book</option>
-<option onclick="CENATAR(3,this);">book & wooden crayons </option>
-<option onclick="CENATAR(4,this);">book & pencile case( wooden crayons & 2x pencils & gumi)</option>
+<option value="2">book</option>
+<option value="3">book & wooden crayons </option>
+<option value="4">book & pencile case( wooden crayons & 2x pencils & gumi)</option>
 </select></div>
 
 <div class="form-group"    style="display:none;"  > <label>Products ekstra:</label>
 <select name="product_size" class="form-control input-sm"   onchange="SETINZI_FTO(this);">
-<option onclick="CENATAR(1,this);">e-book PDF</option>
-<option onclick="CENATAR(0,this);" style="color:green;" >e-book PDF +Adds 1 page</option>
+<option value="1">e-book PDF</option>
+<option value="0" style="color:green;" >e-book PDF +Adds 1 page</option>
 </select>
 </div>
 
@@ -131,9 +131,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
                              </div>
 							 
 		
-<script> var FTO; var DIM;
+<script> var FTO; var DIM;var seLKTOT;
 function SETINZI_FTO(a){ // setira na model ako gi ima ova da menja fotki ako gi ima // ne e mnogu moralno ali e ok
 FTO=a.parentElement.parentElement.parentElement.parentElement.children[0];
+seLKTOT=a.value;
+
+CENATAR(seLKTOT,a);
 
 } 
 
@@ -707,7 +710,9 @@ SLKT.children[1].children[1].value=SLKT.children[1].children[1].children[0].inne
 a.nextElementSibling.innerHTML=txt;}
 
 function CENATAR(a,b){var CNA;var TXT;var ERO;
-b.parentElement.parentElement.parentElement.parentElement.children[1].children[7].children[1].innerHTML=b.innerHTML;
+
+
+b.parentElement.parentElement.parentElement.children[1].children[7].children[1].innerHTML=b.innerHTML;
 if(a==0){CNA=0;
 TXT="€ *free with 1 page adds <button onclick='LETS_SEE(this);'>  see & dowload   </button>";
 
@@ -716,36 +721,28 @@ if(a==1){CNA=3.75; TXT=" ";      ERO="€ ";}
 if(a==2){CNA=9.64; TXT=" ";      ERO="€ ";}
 if(a==3){CNA=15.25;TXT=" ";      ERO="€ ";}
 if(a==4){CNA=17.97;TXT="€ 23.49";ERO="€ ";
-b.parentElement.parentElement.parentElement.parentElement.children[3].children[3].innerHTML=ERO+CNA+" "+TXT.fontcolor("red").strike();
+b.parentElement.parentElement.parentElement.children[3].children[3].innerHTML=ERO+CNA+" "+TXT.fontcolor("red").strike();
 }else{
-b.parentElement.parentElement.parentElement.parentElement.children[3].children[3].innerHTML=ERO+CNA+" "+TXT.fontcolor("green");
+b.parentElement.parentElement.parentElement.children[3].children[3].innerHTML=ERO+CNA+" "+TXT.fontcolor("green");
 }
 CEK_ZA_CNA(a,b);
 
-b.parentElement.parentElement.parentElement.parentElement.children[3].children[4].value=CNA;}
+b.parentElement.parentElement.parentElement.children[3].children[4].value=CNA;}
 
 
 function LETS_SEE(a) {var Urko=a.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.classList[3].slice(1,3);
-//https://1drv.ms/b/s!AhYQ3zb7jm_ibEagsYFLUDtDUS4
+
 if(Urko=="K0"){Urko="https://1drv.ms/b/s!AhYQ3zb7jm_ibEagsYFLUDtDUS4";}else
 if(Urko=="K1"){Urko="23123.pdf";}else
 if(Urko=="K2"){Urko="423423.pdf";}else
 if(Urko=="K3"){Urko="fdgdfg.pdf";}
-//if(Urko=="K4"){Urko=".pdf";}else
-//if(Urko=="V0"){Urko=".pdf";}else
-//if(Urko=="V1"){Urko=".pdf";}else
-//if(Urko==""){Urko=".pdf";}else
-//if(Urko==""){Urko=".pdf";}else
-//if(Urko==""){Urko=".pdf";}else
 
-
-  window.open(Urko);
-}
+  window.open(Urko);}
 
 function CEK_ZA_CNA(a,B){if(a==0){
-B.parentElement.parentElement.parentElement.parentElement.children[3].children[6].style="display:none";
+B.parentElement.parentElement.parentElement.children[3].children[6].style="display:none";
 }else{
-B.parentElement.parentElement.parentElement.parentElement.children[3].children[6].style="display:block";
+B.parentElement.parentElement.parentElement.children[3].children[6].style="display:block";
 }}
 
 
