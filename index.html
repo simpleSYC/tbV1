@@ -1,0 +1,816 @@
+<!DOCTYPE html><html><head><title>TaleBook</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript" ></script>
+<script src="talebook_files/EXTRA/Interactive-Shopping-Cart-Plugin-For-jQuery-SmartCart/dist/js/jquery.smartCart.min.js";type="text/javascript"></script>
+<script type="text/javascript">$(document).ready(function(){$('#smartcart').smartCart();set1();});</script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+<link href="talebook_files/EXTRA/Interactive-Shopping-Cart-Plugin-For-jQuery-SmartCart/dist/css/smart_cart.min.css" rel="stylesheet" type="text/css"/>
+
+
+<script type="text/javascript" src="talebook_files/data/INFO/INFO.js"></script>
+<script type="text/javascript" src="talebook_files/data/K/prK.js"></script>
+<script type="text/javascript" src="talebook_files/data/V/prV.js"></script>
+<script type="text/javascript" src="talebook_files/JS/srkt.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="talebook_files/CSS/w3.css">
+<link rel="stylesheet" href="talebook_files/CSS/me.css">
+<link rel="stylesheet" href="talebook_files/CSS/css.css">
+<link rel="stylesheet" href="talebook_files/CSS/crap.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+</head><body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index: 3; width: 300px; display: none;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove">sdasd</i>
+    </a>
+   
+     <div class="w3-container"><aside style="color:grey;" ><div id="smartcart"></div></aside></div>
+   
+   
+   
+   
+   
+
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor: pointer; display: none;" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="talebook_files/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars">asdasd</i></span>
+    <div class="w3-container">
+    <h1><b>TaleBook</b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <span class="w3-margin-right">Filter:</span> 
+	  
+	  <button class="btn11" onclick="filterSelection('*K'),KATime(this);KATEGORIJA='K';"> Story</button>
+	  <button class="btn11" onclick="filterSelection('*V'),KATime(this);KATEGORIJA='V';"> Sudoku</button>
+	  <button class="btn11" onclick="filterSelection('*V'),KATime(this);KATEGORIJA='V';"> Romans</button>
+	  <button class="btn11" onclick="filterSelection('*V'),KATime(this);KATEGORIJA='V';"> Other</button>
+	  <button class="btn11" onclick="filterSelection('*V'),KATime(this);KATEGORIJA='V';"> Myself Books</button>
+	 
+	 
+    </div>
+    </div>
+  </header>
+  
+  
+  
+  
+  
+   <!-- 	ova e za klon --> 	<div id="BLANKO" class="ok"                           style="display:none;"> 
+<div class="col-md-4 col-sm-6"><div class="sc-product-item thumbnail">
+<img data-name="product_image"   onclick="fotoMODEL(this);" alt="...">
+<div class="caption"><h4 data-name="product_name">BL#</h4><div data-name="product_desc"><span id="dsc"></span> <br> <p id="Dim"></p>
+
+
+
+<div class="dropdown"><span>Langue : </span>
+  <button onclick="myFunction(this);" class="dropbtn">Germany</button>
+  <div  class="dropdown-content" style="height: 500px;">
+    <input type="text" class="SRCO" placeholder="Search.." onkeyup="filterFunction(this);">
+	<div class="jzk">
+	
+	
+	</div>
+	
+
+  </div>
+</div>
+
+<br>
+<label class="switch" onclick="bokFRMT(this,this.children[0]);">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label><span style="position: absolute;font-size: 20px;font-weight: bold;line-height: 35px;">REALbook</span> 
+
+<div style="display:none;"><span>PRODICT[ </span>  <span></span>  <span></span> ]</div>
+
+</div>
+
+
+
+<hr class="line"><div>
+<div class="form-group" ><label>Products ekstra:</label>
+<select name="product_size" class="form-control input-sm"   onchange="SETINZI_FTO(this);"> <!--  realbook   0-5 -->
+<option></option>
+<option></option>
+<option></option>
+<option></option>
+<option></option>
+<option></option></select></div>
+
+<div class="form-group"    style="display:none;"  > <label>Products ekstra:</label>
+<select name="product_size" class="form-control input-sm"   onchange="SETINZI_FTO(this);"><!--  onlisnsko  6-11 -->
+<option></option>
+<option></option>
+<option></option>
+<option></option>
+<option></option>
+<option></option></select></div>
+
+<div class="form-group2"><input class="sc-cart-item-qty" name="product_quantity" min="1" value="1" type="number"></div>
+<strong class="price pull-left">1.55</strong><input name="product_price" value="1.55" type="hidden" />
+<input name="product_id" value="12" type="hidden" />
+<button class="sc-add-to-cart btn btn-success btn-sm pull-right">Add to cart</button>
+</div><div class="clearfix"></div></div></div></div> 
+                             </div>
+							 
+		<script> var FTO; var DIM;var seLKTOT;var CATe;var KATEGORIJA=null;var ITEMOT;var AlE_KATE=[K,V];//
+function SETINZI_FTO(a){ // setira na model ako gi ima ova da menja fotki ako gi ima // ne e mnogu moralno ali e ok
+FTO=a.parentElement.parentElement.parentElement.parentElement.children[0];
+seLKTOT=a.value;
+
+
+CATERIGORIZACIJA(a);
+
+CENATAR(seLKTOT,a);
+} 
+
+
+
+
+
+function CATERIGORIZACIJA(a){
+CATe=a.parentElement.parentElement.parentElement.parentElement.parentElement;
+
+KATEGORIJA=CATe.className.slice(CATe.className.length-7,CATe.className.length-4).slice(0,1);
+ITEMOT=parseInt(CATe.className.slice(CATe.className.length-7,CATe.className.length-4).slice(1,3));
+
+
+if(KATEGORIJA=="K"){KATEGORIJA=AlE_KATE[0];}
+if(KATEGORIJA=="V"){KATEGORIJA=AlE_KATE[1];}
+}
+
+
+
+var GRUPATA;function SETINZI_DIM(a){ GRUPATA=a.parentElement;// ova gi setira chekboksovete i e ok
+for(i=1;i+1<GRUPATA.children.length;i++){
+
+if(GRUPATA.children[i].children[0].checked!=false){
+
+   GRUPATA.children[i].children[0].checked =false;}}
+
+if(a.children[0].checked==false){a.children[0].checked=true;
+
+DIM=a.parentElement.parentElement.parentElement.children[1].children[2];
+DIM.innerHTML=" ( "+a.children[1].innerHTML+" )";
+}}
+
+</script>
+
+						
+
+<script>
+function R_stngs(a,b){
+a.children[0].children[1].children[0].innerHTML=SLKT[b][1];//+"-"+SLKT[ZGOLEMKO][8]+" ";// produkt ime
+a.children[0].children[1].children[1].children[0].innerHTML=SLKT[b][2];// produkt detals     dodadeno + 0
+
+
+for(z=5;z>-1;z--){c=z+4;
+if(SLKT[b][c]!=0){
+a.children[0].children[1].children[3].children[0].children[1].children[z].innerHTML=SLKT[b][c].toString();
+a.children[0].children[1].children[3].children[0].children[1].children[z].value=z;}else{
+a.children[0].children[1].children[3].children[0].children[1].children[z].remove();}}
+
+for(z=5;z>-1;z--){c=z+11;
+if(SLKT[b][c]!=0){
+a.children[0].children[1].children[3].children[1].children[1].children[z].innerHTML=SLKT[b][c].toString();
+a.children[0].children[1].children[3].children[1].children[1].children[z].value=z+6;}else{
+a.children[0].children[1].children[3].children[1].children[1].children[z].remove();}}
+
+
+
+
+	  
+a.children[0].children[1].children[3].children[3].innerHTML=SLKT[b][17]+" &#x20AC;";// ovdeka e cenata
+a.children[0].children[1].children[3].children[4].value=SLKT[b][17];//                  i ova
+
+
+//EDITlmnt.children[0].children[1].children[3].children[5]=SLKT[ZGOLEMKO][2];  // ova e za hiden prodikt value id
+}</script>					 
+  
+  <!-- tuka dole se produktitee-->
+      <section class="container *SECTION"   >
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="text-align: center;font-size: xx-large;">
+                        <span id="KAT">Selekt any category</span><span id="podKAT"></span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row" id="dco">
+                            <!-- BEGIN PRODUCTS -->
+                            <!-- END PRODUCTS -->
+</div></div></div></div></div></section>
+  
+  	
+<script>var N_MODEL=0;var N_M;
+var Nelmt;var LISTA;var myLISTE=[null]; var KOPCE=null;var L1;var L2;var L3;var L4;var L5;var L=[];
+var QQQ=document.getElementsByTagName("aside")[0];var qqq=document.getElementById("qqQQ");
+var parametar0="";var parametar1="";var parametar2="";var parametar3="";var PAR=[parametar0,parametar1,parametar2,parametar3];
+
+
+function clLANG(a){var itmLANG = document.getElementById("JZK");
+var clnLANG = itmLANG.cloneNode(true);a.parentElement.children[2].children[1].appendChild(clnLANG);}
+
+
+function cl(){var itm = document.getElementsByClassName("col-md-4 col-sm-6")[0];
+var cln = itm.cloneNode(true);document.getElementById("dco").appendChild(cln);}</script>
+	
+							
+<script>var eln=K.length+V.length;var EDITlmnt;
+var KVATelmt=[K,V];var SLKT=0;var ZGOLEMKO=0;var IDer;
+for(i=0;i<eln;i++)
+{cl();EDITlmnt= document.getElementsByClassName("col-md-4 col-sm-6")[1+i];
+if(i<KVATelmt[0].length){if(SLKT!=KVATelmt[0]){SLKT=KVATelmt[0];ZGOLEMKO=0;IDer="K";}}else
+if(i+KVATelmt[0].length<KVATelmt[0].length+KVATelmt[1].length){if(SLKT!=KVATelmt[1]){SLKT=KVATelmt[1];ZGOLEMKO=0;IDer="V";}}
+
+
+EDITlmnt.className="col-md-4 col-sm-6 filterDiv *"+IDer+i;
+EDITlmnt.children[0].children[0].src="talebook_files/data/"+IDer+"/img/"+IDer+i+"/"+N_MODEL+"/1.png";
+
+
+R_stngs(EDITlmnt,ZGOLEMKO);
+
+ZGOLEMKO=ZGOLEMKO+1;}
+</script>	
+  <!-- do tuka se priaz na artiklite-->
+  
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-dark-grey">
+  <div class="w3-row-padding">
+    <div class="w3-third">
+      <h3>FOOTER</h3>
+      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo 
+condimentum, porta lectus vitae, ultricies congue gravida diam non 
+fringilla.</p>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="talebook_files/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Lorem</span><br>
+          <span>Sed mattis nunc</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="talebook_files/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Ipsum</span><br>
+          <span>Praes tinci sed</span>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="w3-third">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
+      </p>
+    </div>
+
+  </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+
+<!-- End page content -->
+</div>
+
+
+
+
+
+
+
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal" style="padding-top:0;z-index:111;background-color:#000000e3;color:white;" >
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright" onclick="ClikMODALO(0);">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+	
+	
+  <!-- Services -->
+  <div class="w3-container" id="about" style="margin-top:75px;display:none;background-color: white;">
+    <h1 class="w3-xxxlarge w3-text-red"><b>About B BOSS e-comerc.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
+	
+	
+<div class="slideshow-container">
+
+<div class="mySlides ">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides ">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides ">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)" style="left: 0px;">&#10094;</a>
+<a class="next" onclick="plusSlides(1)"                    >&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+	
+	
+	
+     <br></div>
+	
+	
+	
+	
+	
+	  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px;display:none;">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+
+	
+	<div class="mY"><div class="LS8  1yb VICjCf" tabindex="-1"><div class="hJDwNd-AhqUyc-qWD73c purZT-AhqUyc-II5mzb pSzOP-AhqUyc-qWD73c JNdkSc"><div class="JNdkSc-SmKAyb"><div class="" jscontroller="sGwD4d" jsaction="zXBUYb:zTPCnb;oc1XGd:Qxe3nd;" jsname="F57UId"><div class="oKdM2c Kzv0Me"><div id="h.p_t69QJWSdRFJH" class="hJDwNd-AhqUyc-qWD73c jXK9ad D2fZ2 OjCsFc wHaque"><div class="jXK9ad-SmKAyb"><div class="tyJCtd OWlOyc baZpAe"><div jscontroller="VYKRW" jsaction="rcuQ6b:rcuQ6b;">
+	<div class="WIdY2d M1aSXe"></div>
+	<table  style="width:100%;text-align:left;">
+    <tr ><span style="float:left;">Kirchgasse 3 </span><span style="float:right;" >74397 Pfaffenhofen </span></tr>
+    <tr style="width:100%;" >
+	<iframe style="width:100%;" jsname="L5Fo6c" class="YMEQtf" sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox" aria-label="Map, Kirchgasse 3" src="https://maps-api-ssl.google.com/maps?hl=en-US&amp;ll=49.063975,8.975472&amp;output=embed&amp;q=Kirchgasse+3,+74397+Pfaffenhofen,+Germany+(Kirchgasse+3)&amp;z=16" allowfullscreen="" frameborder="0"></iframe>
+	</tr>
+    <tr ><p> criystylis@gmil.com </p><p style="text-align:right;top:-35px;position:relative;"> 01520 60 12 757 </p></tr>
+ 
+  </table></div></div></div></div></div></div></div></div></div></div>
+</div>
+
+
+	  <!-- Contact da se dodade videoto takvoo-->
+	  
+  <div class="w3-container" id="BzalMTDA" style="margin-top:75px;display:none;">
+    <h1 class="w3-xxxlarge w3-text-red"><b>bezalna metoda iframe.</b></h1>
+	
+	
+	</div>
+	
+	
+    </div>
+  </div>
+
+
+
+
+<script>// Script to open and close sidebar
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+//  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+var ModelFUTER=document.getElementById("modal01");
+var About=document.getElementById("about"); var FOTINJA=document.getElementsByClassName("mySlides");
+About.children[6].innerHTML=I_about; 
+var Contact=document.getElementById("contact");
+var BezlMthd=document.getElementById("BzalMTDA");
+
+
+var MENI=document.getElementsByClassName("container *SECTION")[0];
+
+function ONloado(){var wScreen=screen.width;  ////////////////////////// ova e sitnici da se dodade za razlicni ekrani
+if(wScreen<981){MENI.style="float: unset;";}else{
+
+MENI.children[0].style="display:flex";
+MENI.children[0].children[0].style="flex:0.98";
+}}
+
+function set1(){ONloado();if(KOPCE==null){KOPCE=QQQ.children[0].children[3].children[1].children[0];};
+KOPCE.onclick = function(){if(KOPCE.className=="btn btn-info sc-cart-checkout"){
+
+openModal();  
+OPMD();
+}};}
+
+
+
+
+function openModal() {sminka(true);
+document.getElementById("formular").style.display = "block";var CLN=QQQ.cloneNode(true);qqQQ.appendChild(CLN);
+
+qqQQ.children[0].children[0].children[3].children[1].remove();
+//qqQQ.children[0].children[0].children[1].style="display:none;";//ova bilo za logot i ke go nema
+
+qqQQ.children[0].children[0].children[3].children[0].style='text-align:center';
+
+
+document.getElementsByClassName("*PYP")[0].style="display:none;";
+document.getElementsByClassName("*PYP")[1].style="display:none;";
+}
+function closeModal() { sminka(false);
+document.getElementById("formular").style.display = "none";
+
+document.getElementsByTagName("aside")[1].remove();
+
+document.getElementsByClassName("*PYP")[0].style="display:block;";}
+
+function sminka(a){
+var NBR=document.getElementsByClassName("sc-cart-item-qty");
+var XX=document.getElementsByClassName("sc-cart-remove");
+if(a==true){
+for(i=0;i<XX.length;i++){XX[i].style="display:none;";}
+for(i=0;i<NBR.length;i++){NBR[i].type="text";NBR[i].disabled=true;}
+}else{
+for(i=0;i<XX.length;i++){XX[i].style="display:block;";}
+for(i=0;i<NBR.length;i++){NBR[i].type="number";NBR[i].disabled=false;}}}
+
+
+
+
+
+
+
+
+function w3_open(){//ovie se f za malscrin open close
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";}
+ 
+function w3_close(){//ovie se f za malscrin open close
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";}
+
+// Modal futersko
+function ClikMODALO(a) {ModelFUTER.style.display = "block";
+if(a==1){About.style.display="block";Contact.style.display = "none";BezlMthd.style.display = "none";}else 
+if(a==2){About.style.display="none";Contact.style.display = "block";BezlMthd.style.display = "none";}else 
+if(a==3){About.style.display="none";Contact.style.display = "none";BezlMthd.style.display = "block";}else
+if(a==0){ModelFUTER.style.display = "none";
+
+About.children[0].style.display="block";About.children[1].style.display="block";About.children[2].style.display="block";
+About.children[6].innerHTML=I_about;
+}}
+//////////////
+////////////// dropdownski
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+function KATime(a){
+//  document.getElementById("KAT").innerHTML=a.parentElement.parentElement.previousElementSibling.firstChild.innerHTML+" / ";
+  document.getElementById("podKAT").innerHTML=a.innerHTML;
+
+}
+
+</script>
+
+
+
+<div id="formular" class="w3-modal" style="display:none;">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="closeModal();" class="w3-button w3-display-topright w3-large " style="color:red;text-shadow: none;">X</span>
+      <h1><div id="thankyou_message" style="font-size: x-large;"> 
+	   <span id="Ifo" class="mcls" style="color:black;" ></span>
+	 </div></h1>
+	 
+	 <div id="BSTid"></div>
+	 <div id="BSTcna"></div>
+	 </div>
+	
+	<div class="w3-container">
+	
+	<div class="container" id="tst">
+<h1><span>besthelen sie dein bestelung</span></h1>
+  <div class="w3-row-padding w3-padding-32">
+  
+<div  id="qqQQ" style="float: inline-start;"></div>
+
+  
+    <div class="col-md-4 col-sm-8">
+
+<form class="gform" id="gform" method="POST"  
+action="https://script.google.com/macros/s/AKfycbz9C_gpH9E1CQ4FG_dM29MXSt6LUq3eTme3BLr_ZA/exec">
+
+					<input style="display:none;"  id="BST_id"  value="" name="BESTELUNG_ID" >
+					<input style="display:none;"  id="KND_DTA"  value="" name="KND_DTA" >
+ 
+					<a style="display: inline-flex;">Preise zusamen :<input id="MOEbst" style="width:80px;border-radius:20%;text-align:center;" class="w3-input w3-padding-16 w3-border"  disabled text="measafee" required="" name="PRODUCTS"> mit MtSt ,mit Versandcost</a>
+
+					<br><input class="w3-input w3-padding-16 w3-border" id="EML" type="email" placeholder="your dasda@email.com" required="" name="email" value="">(EMAIL) 
+
+					<br><label class="c00ntainer"><span >eine Coupone ?</span> <br>
+					<input type="checkbox" id="kpn" onclick="KPNge();" value="" name="Coupon?" >
+					<span class="checkmark"></span></label>
+					<input id="cpntx" class="w3-input w3-padding-16 w3-border" type="text"  name="KPN">
+					<br><label class="c00ntainer"><span >mit Geschenk Begrusen ?</span> <br>
+					<input type="checkbox" id="ckb" onclick="CKge();"  value="" name="G_Begrus?" >
+					<span class="checkmark"></span></label>
+					<input id="cbtx" style="width:100%;" class="w3-input w3-padding-16 w3-border" type="text"  name="GESENK_info">
+					<br><label class="c00ntainer"><span >eine wunshe arival date ?</span>  <br>
+					<input type="checkbox" id="dbe" onclick="DTge();"  value="" name="W_Date?" > <br>
+					<span class="checkmark"></span></label>
+					<input style="margin-top:-33px;" id="dte" class="w3-input w3-padding-16 w3-border"  type="date"  name="DATE_FINISH">
+
+					<br><a>empfanger detals</a>
+					<br><p>Name & Vorname:<input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Petar Muler" required="" name="nameKUNDE"></p>
+					<br><p> Strassen:<input class="w3-input w3-padding-16 w3-border" type="text" placeholder="maybachstrasse 8" required="" name="ADRS_STRASSE"></p>
+					<br><p>Stadt:<input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Berlin" required="" name="ADRS_STADT"></p>
+					<br><p>PLC:<input class="w3-input w3-padding-16 w3-border" type="number" placeholder="12345" required="123465789" name="ADRS_PLZ"></p>
+	  
+    
+	  <div class="IDI HDN"  >  
+<input  class="IDI"  name="PR_1">
+<input  class="IDI"  name="PR_2">
+<input  class="IDI"  name="PR_3">
+<input  class="IDI"  name="PR_4">
+<input  class="IDI"  name="PR_5">
+<input  class="IDI"  name="PR_6">
+<input  class="IDI"  name="PR_7">
+<input  class="IDI"  name="PR_8">
+<input  class="IDI"  name="PR_9">
+<input  class="IDI"  name="PR_10">
+<input  class="IDI"  name="PR_11">
+<input  class="IDI"  name="PR_12">
+<input  class="IDI"  name="PR_13">
+<input  class="IDI"  name="PR_14">
+<input  class="IDI"  name="PR_15">
+<input  class="IDI"  name="PR_16">
+<input  class="IDI"  name="PR_17">
+<input  class="IDI"  name="PR_18">
+  <input value="TB" name="KEY" >
+</div></div></div>
+
+
+
+</div>
+
+ <br><a style="cursor:default;text-align:center;color:rosybrown;display:inherit;">wie functionirt <br><span  style="cursor:pointer;color:royalblue;" >besthelen & bezhalen</span><br> bei criystylis ? </a>
+
+
+
+	   
+	 
+<div style="padding: 33px;"> 	  <!-- PayPal Logo -->
+<button class="w3-button w3-light-grey w3-block w3-center" id="KOPCEppl" style="border-radius: 15px;">
+<h1><span>bestelen jetz</span></h1>
+<a id="sndBTN">bestelen zie jetz <br><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_200x51.png" /> </a>
+
+</button>
+</div>
+
+</form></div></div></div> 
+
+
+
+
+
+
+
+
+<script> var produktID;
+function fotoMODEL(a){ produktID=a.src.slice(a.src.length-10,a.src.length-8);//K0
+
+for(i=0;i<3;i++){
+FOTINJA[i].children[1].src="talebook_files/data/"+produktID.slice(0,1)+"/img/"+produktID+"/0/"+i+".png";
+}
+ModelFUTER.style.display = "block";About.style.display="block";
+About.children[0].style.display="none";About.children[1].style.display="none";About.children[2].style.display="none";
+About.children[6].innerHTML="nonedas asd a";/// ova e za artikal id descripshen
+//da se vrati u normala kako treba na close  !!
+}
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction(a) {clLANG(a);
+a.parentElement.children[2].classList.toggle("show");}
+
+
+function SET_me(a){
+a.parentElement.parentElement.parentElement.classList.toggle("show");
+a.parentElement.parentElement.parentElement.parentElement.children[1].innerHTML=a.innerHTML;
+
+a.parentElement.remove();}
+
+function filterFunction(ELMENT) {
+  var input, filter, ul, li, a, i;
+                                                           input =ELMENT;
+  filter = input.value.toUpperCase();
+                                                           div =ELMENT.parentElement;
+                               a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+var SLKT;
+function bokFRMT(a,b){var txt;SLKT=a.parentElement.parentElement.children[3];var PLUSKO;
+
+
+CATERIGORIZACIJA(a.children[0]);
+
+if(b.checked==true){PLUSKO=3;
+SLKT.children[0].style="display:block";
+SLKT.children[1].style="display:none";
+
+CENATAR(2,a.parentElement.parentElement.children[3].children[0].children[1]);
+
+SLKT.children[0].children[1].selectedIndex=0;
+
+}else{PLUSKO=10;
+SLKT.children[0].style="display:none";
+SLKT.children[1].style="display:block";
+
+CENATAR(1,a.parentElement.parentElement.children[3].children[1].children[1]);
+
+SLKT.children[1].children[1].selectedIndex=0;
+
+//SLKT.children[1].children[1].value=SLKT.children[1].children[1].children[0].innerHTML; 
+                                   //SLKT.children[1].children[1].children[0].click();
+								   }
+txt=KATEGORIJA[ITEMOT][PLUSKO];
+
+
+a.nextElementSibling.innerHTML=txt;}
+
+
+var CNA;var TXT;var ERO;var c;
+function CENATAR(a,b){
+
+b.parentElement.parentElement.parentElement.children[1].children[7].children[1].innerHTML=b.innerHTML;
+
+
+c=parseInt(parseInt(a)+16);
+CNA=KATEGORIJA[ITEMOT][c];
+CEK_ZA_CNA(a,b);
+
+
+if(a==7){CNA=0;
+TXT="€ *free with 1 page adds <button onclick='LETS_SEE(this);'>  see & dowload   </button>";ERO="";}
+else{ERO="€ ";
+if(KATEGORIJA[ITEMOT][29]!=0){TXT=KATEGORIJA[ITEMOT][29].toString();}else{TXT="";}}//upv
+
+if(a==2){
+b.parentElement.parentElement.parentElement.children[3].children[3].innerHTML=ERO+CNA+" "+TXT.fontcolor("red").strike();}
+
+else{
+b.parentElement.parentElement.parentElement.children[3].children[3].innerHTML=ERO+CNA+" "+TXT.fontcolor("green");}
+
+
+
+
+b.parentElement.parentElement.parentElement.children[3].children[4].value=CNA;}
+
+
+function LETS_SEE(a) {var Urko=a.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.classList[3].slice(1,3);
+
+if(Urko=="K0"){Urko="https://drive.google.com/file/d/1l8YFP5U4RrjuaYMF6LftRs41T_zKZhzU/view?usp=sharing";}else
+if(Urko=="K1"){Urko="23123.pdf";}else
+if(Urko=="K2"){Urko="423423.pdf";}else
+if(Urko=="K3"){Urko="fdgdfg.pdf";}
+
+  window.open(Urko);}
+
+function CEK_ZA_CNA(a,B){if(a==0){
+B.parentElement.parentElement.parentElement.children[3].children[6].style="display:none";
+}else{
+B.parentElement.parentElement.parentElement.children[3].children[6].style="display:block";
+}}
+
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if ((!event.target.matches('.dropbtn'))&&(!event.target.matches('.SRCO'))) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+		
+		  document.getElementById("JZK").remove();
+      }
+    }
+  }
+}
+
+
+
+
+
+</script>
+
+
+  
+
+<div style="display:none;">
+<div id="1--JZK"><!-- da se trgne kecot za seleksen kazicitee-->
+<a onclick="SET_me(this);">Albanian	</a>
+<a onclick="SET_me(this);">Bulgarian	</a>
+<a onclick="SET_me(this);">Croatian 	</a>
+<a onclick="SET_me(this);">Czech 	</a>
+<a onclick="SET_me(this);">Danish 	</a>
+<a onclick="SET_me(this);">Estonian 	</a>
+<a onclick="SET_me(this);">Finnish	</a>
+<a onclick="SET_me(this);">French 	</a>
+<a onclick="SET_me(this);">English	</a>
+<a onclick="SET_me(this);">Greek 	</a>
+<a onclick="SET_me(this);">Hungarian 	</a>
+<a onclick="SET_me(this);">Italian 	</a>
+<a onclick="SET_me(this);">Latvian 	</a>
+<a onclick="SET_me(this);">German	</a>
+<a onclick="SET_me(this);">Lithuanian 	</a>
+<a onclick="SET_me(this);">Macedonian	</a>
+<a onclick="SET_me(this);">Maltese 	</a>
+<a onclick="SET_me(this);">French	</a>
+<a onclick="SET_me(this);">Dutch 	</a>
+<a onclick="SET_me(this);">Norwegian	</a>
+<a onclick="SET_me(this);">Polish	</a>
+<a onclick="SET_me(this);">Portuguese	</a>
+<a onclick="SET_me(this);">Romanian 	</a>
+<a onclick="SET_me(this);">Russian	</a>
+<a onclick="SET_me(this);">Italian	</a>
+<a onclick="SET_me(this);">Serbian	</a>
+<a onclick="SET_me(this);">Slovak	</a>
+<a onclick="SET_me(this);">Slovenian 	</a>
+<a onclick="SET_me(this);">Spanish	</a>
+<a onclick="SET_me(this);">Swedish	</a>
+<a onclick="SET_me(this);">Turkish	</a>
+<a onclick="SET_me(this);">Ukrainian	</a>
+</div></div>
+	
+<script data-cfasync="false" type="text/javascript" src="talebook_files/JS/v6/MJS.js"></script>
+<script data-cfasync="false" type="text/javascript" src="talebook_files/JS/v6/form-submission-handler.js"></script>
+
+</body></html>
